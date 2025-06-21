@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emily Wilson | Fashion Diary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #fffaf7;
+      color: #333;
+    }
+    header {
+      background-color: #fff;
+      padding: 40px 0;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    header h1 {
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+    .about {
+      padding: 30px;
+      text-align: center;
+      background-color: #fdf6f0;
+    }
+    .about h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+    .about p {
+      font-size: 1em;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Emily Wilson</h1>
+  <p>Fashion Diary</p>
+</header>
+
+<section class="gallery">
+  <img src="https://source.unsplash.com/featured/?fashion,1" alt="Look 1">
+  <img src="https://source.unsplash.com/featured/?fashion,2" alt="Look 2">
+  <img src="https://source.unsplash.com/featured/?fashion,3" alt="Look 3">
+  <img src="https://source.unsplash.com/featured/?fashion,4" alt="Look 4">
+</section>
+
+<section class="about">
+  <h2>About Me</h2>
+  <p>Hello, I'm Emily Wilson — a passionate fashion lover sharing my style and creativity with the world. This is my digital closet, where I document my looks, moods, and inspiration. Let’s create beauty through fashion!</p>
+</section>
+
+<footer>
+  &copy; 2025 Emily Wilson. All rights reserved.
+</footer>
+
+</body>
+</html>
