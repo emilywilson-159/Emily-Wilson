@@ -1,88 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Emily Wilson | Fashion Diary</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emily Wilson Fashion</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
-      background-color: #fffaf7;
+      margin: 0;
+      background: #fff5f9;
       color: #333;
     }
+    nav {
+      background-color: #cc3366;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+    .logo img {
+      height: 40px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+    }
+    nav ul li {
+      cursor: pointer;
+    }
+    nav ul li:hover {
+      text-decoration: underline;
+    }
     header {
-      background-color: #fff;
-      padding: 40px 0;
       text-align: center;
-      border-bottom: 1px solid #ddd;
+      padding: 60px 20px 30px;
     }
     header h1 {
-      font-size: 2.5em;
-      letter-spacing: 2px;
-      margin: 0;
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #cc3366;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #555;
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 15px;
-      padding: 30px;
+      padding: 0 30px 40px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
     .gallery img {
       width: 100%;
-      height: auto;
-      border-radius: 6px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
     .gallery img:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
-    .about {
-      padding: 30px;
-      text-align: center;
-      background-color: #fdf6f0;
-    }
-    .about h2 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-    .about p {
-      font-size: 1em;
+    .contact {
+      background: white;
       max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.6;
+      margin: 40px auto 60px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    footer {
+    .contact h2 {
       text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #999;
+      margin-bottom: 20px;
+      color: #cc3366;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact label {
+      font-weight: bold;
+    }
+    .contact input,
+    .contact textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    .contact button {
+      background-color: #cc3366;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+    }
+    .contact button:hover {
+      background-color: #b02a57;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Emily Wilson</h1>
-  <p>Fashion Diary</p>
-</header>
+  <!-- Menu bar with logo -->
+  <nav>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Fashion_logo_example.svg/1200px-Fashion_logo_example.svg.png" alt="Emily Wilson logo">
+    </div>
+    <ul>
+      <li onclick="document.getElementById('gallery').scrollIntoView({behavior: 'smooth'});">Gallery</li>
+      <li onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">Contact</li>
+    </ul>
+  </nav>
 
-<section class="gallery">
-  <img src="https://source.unsplash.com/featured/?fashion,1" alt="Look 1">
-  <img src="https://source.unsplash.com/featured/?fashion,2" alt="Look 2">
-  <img src="https://source.unsplash.com/featured/?fashion,3" alt="Look 3">
-  <img src="https://source.unsplash.com/featured/?fashion,4" alt="Look 4">
-</section>
+  <!-- Header -->
+  <header>
+    <h1>Welcome to Emily Wilson</h1>
+    <p>Discover elegance in every thread. Stay fabulous!</p>
+  </header>
 
-<section class="about">
-  <h2>About Me</h2>
-  <p>Hello, I'm Emily Wilson — a passionate fashion lover sharing my style and creativity with the world. This is my digital closet, where I document my looks, moods, and inspiration. Let’s create beauty through fashion!</p>
-</section>
+  <!-- Gallery -->
+  <section id="gallery" class="gallery">
+    <img src="https://source.unsplash.com/featured/?fashion,dress1" alt="Fashion 1">
+    <img src="https://source.unsplash.com/featured/?fashion,dress2" alt="Fashion 2">
+    <img src="https://source.unsplash.com/featured/?fashion,dress3" alt="Fashion 3">
+    <img src="https://source.unsplash.com/featured/?fashion,dress4" alt="Fashion 4">
+    <img src="https://source.unsplash.com/featured/?fashion,dress5" alt="Fashion 5">
+    <img src="https://source.unsplash.com/featured/?fashion,dress6" alt="Fashion 6">
+  </section>
 
-<footer>
-  &copy; 2025 Emily Wilson. All rights reserved.
-</footer>
+  <!-- Contact Form -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="event.preventDefault(); alert('Thanks for contacting me!');">
+      <label for="name">Name</label>
+      <input type="text" id="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
 </body>
 </html>
